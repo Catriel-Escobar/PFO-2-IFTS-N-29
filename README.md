@@ -49,17 +49,18 @@
 
 Captura para reflejar los cambios en el estilado
 
-**Menu mobile antes. \n
-![image](https://github.com/user-attachments/assets/ff7e316b-62ad-41a7-af78-0edd3de47c28)
+###  Menu mobile antes  
+![Menu mobile antes](https://github.com/user-attachments/assets/ff7e316b-62ad-41a7-af78-0edd3de47c28)
 
-**Menu mobile ahora. \n
+###  Menu mobile ahora  
+![Menu mobile ahora](https://github.com/user-attachments/assets/8dfd78d3-35c0-43cf-b018-1a62ee49d1b2)
 
-![image](https://github.com/user-attachments/assets/8dfd78d3-35c0-43cf-b018-1a62ee49d1b2)
+---
 
+###  Box antes  
+![Box antes](https://github.com/user-attachments/assets/93e27ccb-bc6a-437e-bc44-95923d215e9f)
 
-**Box antes. \n
-![image](https://github.com/user-attachments/assets/93e27ccb-bc6a-437e-bc44-95923d215e9f)
+###  Box ahora  
+![Box ahora](https://github.com/user-attachments/assets/249c0051-e37c-486d-be91-fd1f72af14d6)
 
-**Box ahora. \n
-![image](https://github.com/user-attachments/assets/249c0051-e37c-486d-be91-fd1f72af14d6)
 
