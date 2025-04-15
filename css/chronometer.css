@@ -1,0 +1,26 @@
+.chronometer-display {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(var(--primary-color-rgb), 0.9);
+  color: var(--header-text);
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chronometer-display:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chronometer-display .time-unit {
+  font-weight: 600;
+  color: var(--secondary-color);
+}

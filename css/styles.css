@@ -1,5 +1,6 @@
 /* Estilos generales */
 :root {
+  --primary-color-rgb: 44, 62, 80;
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
   --accent-color: #e74c3c;
@@ -11,6 +12,7 @@
 }
 
 :root.dark-theme {
+  --primary-color-rgb: 19, 38, 53;
   --primary-color: #132635;
   --secondary-color: #2980b9;
   --accent-color: #c0392b;

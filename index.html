@@ -7,12 +7,15 @@
     <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
 
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/chronometer.css" />
+    <link rel="stylesheet" href="css/popup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
     <script src="js/theme.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
   </head>
   <body>
     <!-- Header: Contiene el título principal del sitio -->
@@ -126,7 +129,7 @@
 
       <section id="contacto">
         <h2>Contacto</h2>
-        <form>
+        <form id="form">
           <div class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required />
@@ -143,12 +146,16 @@
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" required />
           </div>
-          <button
-            type="submit"
-            onclick="alert('Lo sentimos, la funcionalidad de envío no está habilitada en este momento.');">
-            Enviar
-          </button>
+          <button type="submit">Enviar</button>
         </form>
+
+        <div class="popup-overlay" id="confirmationPopup">
+          <div class="popup-content">
+            <h3>¡Éxito!</h3>
+            <p>El formulario se ha enviado correctamente.</p>
+            <button id="closePopup">Aceptar</button>
+          </div>
+        </div>
       </section>
 
       <section id="películas">

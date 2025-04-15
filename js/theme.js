@@ -9,7 +9,7 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-function initTheme() {
+export function initTheme() {
   const root = document.documentElement;
   const themeSwitch = document.createElement('button');
   themeSwitch.className = 'theme-switch';
@@ -29,6 +29,3 @@ function initTheme() {
   // Agregar evento click al botón
   themeSwitch.addEventListener('click', toggleTheme);
 }
-
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', initTheme);
