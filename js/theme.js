@@ -3,13 +3,13 @@ function toggleTheme() {
   const root = document.documentElement;
   // simplemente alterna la clase dark-theme en el root.
   const isDark = root.classList.toggle('dark-theme');
-  console.log(isDark);
+
   const themeSwitch = document.querySelector('.theme-switch');
   themeSwitch.innerHTML = isDark ? '☀️' : '🌙';
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-export function initTheme() {
+export const initTheme = () => {
   const root = document.documentElement;
   const themeSwitch = document.createElement('button');
   themeSwitch.className = 'theme-switch';
@@ -28,4 +28,4 @@ export function initTheme() {
 
   // Agregar evento click al botón
   themeSwitch.addEventListener('click', toggleTheme);
-}
+};

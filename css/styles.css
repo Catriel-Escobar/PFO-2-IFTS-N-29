@@ -2,25 +2,29 @@
 :root {
   --primary-color-rgb: 44, 62, 80;
   --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --text-color: #333;
+  --secondary-color: #2980b9;
+  --accent-color: #c0392b;
+  --text-color: #2c3e50;
   --bg-color: #f5f6fa;
   --card-bg: white;
-  --header-text: white;
-  --nav-text: white;
+  --header-text: #ffffff;
+  --nav-text: #ffffff;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
 }
 
 :root.dark-theme {
   --primary-color-rgb: 19, 38, 53;
   --primary-color: #132635;
-  --secondary-color: #2980b9;
-  --accent-color: #c0392b;
-  --text-color: #f5f6fa;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #ecf0f1;
   --bg-color: #2c3e50;
   --card-bg: #34495e;
-  --header-text: #f5f6fa;
-  --nav-text: #f5f6fa;
+  --header-text: #ffffff;
+  --nav-text: #ffffff;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
 }
 
 /* Theme Switch */
@@ -71,6 +75,10 @@ header {
 nav {
   background-color: var(--secondary-color);
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -78,17 +86,107 @@ nav ul {
   justify-content: center;
   list-style: none;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 nav a {
   color: var(--nav-text);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: all var(--transition-speed);
+  transform: translateX(-50%);
 }
 
 nav a:hover {
-  color: var(--accent-color);
+  color: var(--header-text);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--nav-text);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
 }
 
 /* Secciones principales */
@@ -143,6 +241,67 @@ h2 {
 #sobre-mi img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Habilidades */
+.habilidades-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.tecnologias-actuales,
+.tecnologias-futuras {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed);
+}
+
+.tecnologias-actuales:hover,
+.tecnologias-futuras:hover {
+  transform: translateY(-5px);
+}
+
+.tecnologias-actuales h3,
+.tecnologias-futuras h3 {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.tecnologias-actuales ul,
+.tecnologias-futuras ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.tecnologias-actuales li,
+.tecnologias-futuras li {
+  background: var(--primary-color);
+  color: var(--header-text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 0.9rem;
+  transition: background-color var(--transition-speed);
+}
+
+.tecnologias-actuales li:hover,
+.tecnologias-futuras li:hover {
+  background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .habilidades-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Tarjetas y Películas */
@@ -317,4 +476,21 @@ footer {
   form {
     padding: 1rem;
   }
+}
+
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--nav-text);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color var(--transition-speed);
+}
+
+.close-menu:hover {
+  color: var(--accent-color);
 }

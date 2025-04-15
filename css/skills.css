@@ -1,0 +1,73 @@
+/* Skills Section Animations */
+.tecnologias-actuales li,
+.tecnologias-futuras li {
+  animation: skillFadeIn 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes skillFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tecnologias-actuales li:nth-child(n),
+.tecnologias-futuras li:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i, 1));
+}
+
+/* Skills Grid Layout */
+.habilidades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Skill Cards */
+.skill-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Progress Bars */
+.skill-progress {
+  height: 8px;
+  background: var(--bg-color);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .habilidades-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,66 +1,47 @@
-# Portfolio Personal - Práctica Formativa Obligatoria 1
+# Portfolio Personal - Práctica Formativa Obligatoria 2
 
-## Descripción del Proyecto
+### Mejoras Estructurales Implementadas
 
-Este Trabajo Práctico consiste en el desarrollo de un portfolio personal responsivo utilizando HTML y CSS. El proyecto implementa una interfaz moderna y atractiva que incluye secciones como "Sobre Mí", "Proyectos", "Habilidades", "Películas Favoritas" y un formulario de contacto, demostrando la aplicación práctica de conceptos fundamentales de desarrollo web front-end.
+1. **Menú Hamburguesa para Navegación Móvil**
 
-## Checklist de Requerimientos
+   - Implementación: Componente interactivo que se despliega suavemente desde el lateral
+   - Mejora la usabilidad en dispositivos móviles ocultando el menú cuando no se necesita
+   - Incluye animación suave y botón de cierre para mejor experiencia de usuario
+   - Justificación: Optimiza el espacio en pantallas pequeñas mientras mantiene accesible la navegación
 
-### Estructura del Proyecto
+2. **Layout con Grid para Proyectos y Habilidades**
+   - Implementación: Sistema de grid responsive para organizar tarjetas de proyectos y habilidades
+   - Ajuste automático de columnas según el tamaño de pantalla
+   - Justificación: Mejora la presentación visual y organización del contenido, facilitando su lectura
 
-- [x] Archivo "index.html" ubicado en la raíz
-- [x] Carpeta "css" que contenga el archivo "styles.css"
-- [x] Carpeta "assets" para recursos gráficos
-- [x] Archivo "README.md" creado, que incluya una breve descripción del TP y este checklist
+### Funcionalidades JavaScript Implementadas
 
-### Repositorio y Publicación
+1. **Sistema de Temas (Claro/Oscuro)**
 
-- [x] Repositorio en GitHub creado
-- [x] Proyecto subido al repositorio
-- [x] Proyecto publicado utilizando GitHub Pages
-- [x] En el "README.md" se indica la URL de GitHub Pages
+   - Implementación: Utiliza classList.toggle para alternar la clase 'dark-theme' en el HTML
+   - Guarda la configuracion del usuario en localStorage
+   - Detecta automáticamente la preferencia del sistema usando matchMedia
+   - Justificación: Mejora la accesibilidad y experiencia de usuario permitiendo personalizar el modo de visualización
 
-### Uso de Google Fonts
+2. **Cronómetro Flotante**
 
-- [x] Enlace a Google Fonts incluido en la sección "head" del HTML
-- [x] La tipografía importada se aplica en el sitio
-- [x] Decisión de fuente: Elegí Poppins por su excelente legibilidad y aspecto moderno, que complementa perfectamente el diseño minimalista del portfolio. Su variedad de pesos permite una jerarquía visual clara y profesional.
+   - Implementación: Utiliza setInterval para actualizar el tiempo cada segundo
+   - Justificación: Mostrar cuanto tiempo queda para la entrega del proyecto
 
-### HTML
+3. **Validación de Formulario**
 
-- [x] El documento inicia con la declaración DOCTYPE y usa el atributo lang="es"
-- [x] Se han incluido las metaetiquetas obligatorias: charset y viewport
-- [x] Se ha definido un título descriptivo
-- [x] Se han vinculado correctamente el archivo CSS y el enlace a Google Fonts
+   - Implementación: Utiliza expresiones regulares para validar campos como correo electrónico y telefono
+   - Feedback visual inmediato al usuario
+   - Previene envío con datos inválidos
+   - Justificación: Mejora la experiencia de usuario y asegura la calidad de los datos
 
-### Secciones obligatorias en "main"
+4. **Pop-up de Confirmación**
 
-- [x] Barra de navegación ("nav") presente y contiene 3 enlaces (Sobre mí, Proyectos, Contacto)
-- [x] Se han insertado comentarios explicativos en el código HTML para cada sección principal
+   - Implementación: Componente modal que se muestra al enviar el formulario exitosamente
+   - Animación suave de entrada/salida
+   - Se cierra automáticamente después de 3 segundos
+   - Justificación: Proporciona feedback claro sobre las acciones del usuario
 
-### CSS
-
-- [x] Existe el archivo "styles.css" con estilos personalizados
-- [x] Se utilizan selectores basados en clases e identificadores
-- [x] La tipografía importada desde Google Fonts se aplica correctamente en todos los elementos
-
-### Layout y Organización
-
-- [x] Se ha organizado el layout utilizando Grid para las secciones de tarjetas y películas
-- [x] Ventajas de Grid: Permitió crear un diseño responsivo de manera eficiente, especialmente en las secciones de tarjetas y películas. Grid facilita la organización de elementos en filas y columnas, adaptándose automáticamente al tamaño de la pantalla con grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)).
-
-### Estilización de Componentes
-
-- [x] Se han personalizado los estilos de formularios, botones y enlaces
-- [x] Se han ajustado las dimensiones usando unidades relativas (rem para espaciados, % para anchos)
-- [x] Animaciones implementadas:
-  - Efecto de escala y sombra en la imagen de perfil al hacer hover
-  - Transición suave en tarjetas de proyectos al pasar el mouse
-  - Animación fadeInUp en la sección "Sobre Mí"
-  - Transiciones en botones y enlaces
-
-### Consideraciones Adicionales
-
-- [x] Diseño responsivo implementado con media queries y unidades relativas
-- [x] Buenas prácticas de accesibilidad: uso de alt en imágenes, contraste adecuado de colores
-- [x] Comentarios descriptivos en CSS explicando la organización de estilos y decisiones de diseño
+5. **Galería de Imágenes**
+   - Implementación: Navegación dinámica entre imágenes con efectos de transición
+   - Justificación: Mejora la presentación de proyectos con una interfaz interactiva
