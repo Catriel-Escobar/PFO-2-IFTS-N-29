@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Catriel Escobar</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <script src="js/theme.js" defer></script>
+  </head>
+  <body>
+    <!-- Header: Contiene el título principal del sitio -->
+    <header>
+      <h1>Catriel Escobar - Backend Developer</h1>
+    </header>
+
+    <!-- Nav: Barra de navegación principal. -->
+    <nav>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#tarjetas">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Sección de presentación personal. -->
+      <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <img src="assets/profile.jpg" alt="Foto de Catriel Escobar" />
+        <p>
+          Soy Catriel, desarrollador backend especializado en NestJS, Spring
+          Boot y .NET. Diseño APIs REST escalables, manejo autenticación
+          (OAuth2, JWT) y bases de datos SQL/NoSQL, además de trabajar con
+          Docker y Kubernetes. Siempre en busca de nuevas tecnologías para
+          optimizar mis soluciones.
+        </p>
+      </section>
+
+      <!-- Sección de tarjetas.-->
+      <section id="tarjetas">
+        <h2>Proyectos</h2>
+        <div class="tarjetas-container">
+          <div class="tarjeta">
+            <img
+              src="assets/gruas-app.jpg"
+              alt="Plataforma de Alquiler de Grúas" />
+            <h3>Plataforma de Alquiler de Grúas</h3>
+            <p>
+              Desarrollo de API REST con Spring Boot para la gestión de alquiler
+              de grúas, incluyendo integración con Google Maps API y
+              optimización en MySQL.
+            </p>
+            <a href="#tarjetas" class="github-link">Repositorio privado.</a>
+          </div>
+
+          <div class="tarjeta">
+            <img src="assets/fintech-hackathon.jpg" alt="Fintech Hackathon" />
+            <h3>Fintech Hackathon</h3>
+            <p>
+              Desarrollo de un MVP para fintech con Spring Boot, autenticación
+              segura y pagos en línea mediante Mercado Pago, además de
+              validación de identidad con IA.
+            </p>
+            <a
+              href="https://github.com/No-Country-simulation/h3-24-proptech-java-react"
+              class="github-link"
+              target="_blank"
+              >Ver en GitHub</a
+            >
+          </div>
+          <div class="tarjeta">
+            <img
+              src="assets/fintech-hackathon-2.png"
+              alt="Fintech Hackathon IUPI" />
+            <h3>Fintech Hackathon IUPI</h3>
+            <p>
+              Implementación de API con Spring Boot, conexión con APIs
+              financieras, automatización de tareas y funcionalidad de
+              compra-venta de activos.
+            </p>
+            <a
+              href="https://github.com/No-Country-simulation/h4-09-fintech"
+              class="github-link"
+              target="_blank"
+              >Ver en GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades">
+        <div class="habilidades-container">
+          <div class="tecnologias-actuales">
+            <h3>Tecnologías que domino</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript (TypeScript)</li>
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>NestJS</li>
+              <li>Express</li>
+              <li>SQL & NoSQL</li>
+              <li>Docker & Kubernetes</li>
+              <li>OAuth2 & JWT</li>
+            </ul>
+          </div>
+          <div class="tecnologias-futuras">
+            <h3>Tecnologías por aprender</h3>
+            <ul>
+              <li>AWS</li>
+              <li>.NET</li>
+              <li>Python</li>
+              <li>Inglés conversacional</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required />
+          </div>
+          <button
+            type="submit"
+            onclick="alert('Lo sentimos, la funcionalidad de envío no está habilitada en este momento.');">
+            Enviar
+          </button>
+        </form>
+      </section>
+
+      <section id="películas">
+        <h2>Mis Películas Favoritas</h2>
+        <div class="peliculas-container">
+          <div class="pelicula">
+            <img src="assets/pelicula.webp" alt="Película 1" />
+            <h3>DEADPOOL</h3>
+            <p>
+              Una película de superhéroes irreverente que mezcla acción y humor
+              negro, protagonizada por un mercenario con poderes de
+              regeneración.
+            </p>
+          </div>
+          <div class="pelicula">
+            <img src="assets/pelicula2.webp" alt="Película 2" />
+            <h3>Pulp Fiction</h3>
+            <p>
+              Una narrativa no lineal que revolucionó la forma de contar
+              historias en el cine.
+            </p>
+          </div>
+          <div class="pelicula">
+            <img src="assets/pelicula3.jpg" alt="Película 3" />
+            <h3>El Señor de los Anillos</h3>
+            <p>
+              Una épica aventura que demuestra el poder de la amistad y la
+              determinación.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: Enlaces a redes sociales. Mejora futura: Añadir más redes. -->
+    <footer>
+      <div class="redes-sociales">
+        <a href="https://www.linkedin.com/in/catrielescobar/" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/Catriel-Escobar" target="_blank">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>
